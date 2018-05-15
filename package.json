@@ -4,7 +4,7 @@
   "description": "Client API for Dat pinning services",
   "main": "index.js",
   "bin": {
-    "dat-pinning-service-client": "bin.js"
+    "dat-pin": "bin.js"
   },
   "scripts": {
     "test": "ava -s test.js"
