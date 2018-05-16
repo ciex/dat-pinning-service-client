@@ -12,6 +12,8 @@ function go (action, ...args) {
   createClient(config["serverUrl"], {username: config["username"], password: config["password"]}, (err, client) => {
     if (err) return onerror(err)
 
+    if (typeof action === 'undefined') action = 'list'
+
     console.log(action, '(', args.map(JSON.stringify), ')')
     switch (action) {
       case 'add': return client.addDat({url: args[0], name: args[1], domains: args.slice(2)}, cb)
